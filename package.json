@@ -1,5 +1,5 @@
 {
-  "name": "rails-profile",
+  "name": "move-top-profile",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
