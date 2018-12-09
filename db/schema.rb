@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_08_183220) do
+ActiveRecord::Schema.define(version: 2018_12_09_173958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,4 +25,16 @@ ActiveRecord::Schema.define(version: 2018_12_08_183220) do
     t.text "blurb"
   end
 
+  create_table "testemonials", force: :cascade do |t|
+    t.bigint "project_id"
+    t.string "name"
+    t.string "connection"
+    t.text "content"
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_testemonials_on_project_id"
+  end
+
+  add_foreign_key "testemonials", "projects"
 end
