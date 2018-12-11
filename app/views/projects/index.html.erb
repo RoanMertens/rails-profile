@@ -1,6 +1,14 @@
 <h1>Projects#index</h1>
 <p>Find me in app/views/projects/index.html.erb</p>
 
+<% @projects.each do |project| %>
+  <h3><%= link_to project.name, project_path(project) %></h3>
+  <p>website: <%= project.location_url %></p>
+  <p>github: <%= project.github_url %></p>
+  <p>image url: <%= project.image_url %></p>
+  <p>text: <%= project.blurb %></p>
+<% end %>
+
 <div>
   <%= link_to 'HOME', root_path %>
   <%= link_to 'ABOUT', about_path %>
