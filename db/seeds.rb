@@ -6,7 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# projects
+# projects.
+
+puts "Cleansing projects"
+Project.destroy_all
+puts "Cleansing testemonials"
+Testemonial.destroy_all
+puts "Preparing new seeds"
+
 names = ['Buddy Up',
          'On Board',
          'Static about page',
@@ -38,22 +45,21 @@ image = '--'
 blurb = '--'
 
 names = names.each_with_index do |name, index|
-  Project.create(name: name, location_url: location[index], github_url: github[index], image_url:image, blurb: blurb)
+  Project.create(name: name,
+                 location_url: location[index],
+                 github_url: github[index],
+                 image_url: image,
+                 blurb: blurb)
 end
 
 projects = Project.all
 
+# testemonials
+person = [{ connection: 'colleague', project: projects.first, content: 'amazing', rating: 8, name: 'Freddie Scadding' },
+          { connection: 'colleague', project: projects.first, content: 'such a nice guy', rating: 7, name: 'Maria Sanches' },
+          { connection: 'teacher', project: projects.second, content: 'hardworking', rating: 9, name: 'Edward Ward' },
+          { connection: 'colleague', project: projects.second, content: 'friendly', rating: 10, name: 'Luiza Pinto' },
+          { connection: 'client', project: projects[5], content: 'clear explanations', rating: 8, name: 'Gustav Hoegen' },
+          { connection: 'teacher', project: projects.first, content: 'great student', rating: 7, name: 'Benjamin Baranger' }]
 
-# testemonials = testemonial.create(name: '', connection: '', project: projects.first, content: '', rating: )
-
-# # testemonials
-# person = ['Freddie Scadding', 'Maria Sanches', 'Edward Ward', 'Luiza Pinto', 'Gustav Hoegen', 'Benjamin Baranger']
-# connection = ['colleague', 'client', 'teacher']
-
-
-
-
-
-
-
-
+Testemonial.create(person)
