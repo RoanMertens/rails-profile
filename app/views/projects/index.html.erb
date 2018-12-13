@@ -1,5 +1,9 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<!-- navbar -->
+<div>
+  <%= link_to 'HOME', root_path %>
+  <%= link_to 'ABOUT', about_path %>
+  <%= link_to 'CONTACT', contact_path %>
+</div>
 
 <% @projects.each do |project| %>
   <h3><%= link_to project.name, project_path(project) %></h3>
@@ -8,10 +12,3 @@
   <p>image url: <%= project.image_url %></p>
   <p>text: <%= project.blurb %></p>
 <% end %>
-
-<div>
-  <%= link_to 'HOME', root_path %>
-  <%= link_to 'ABOUT', about_path %>
-  <%= link_to 'CONTACT', contact_path %>
-  <%= link_to 'PROJECTS', projects_path %>
-</div>
