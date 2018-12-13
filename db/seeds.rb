@@ -42,14 +42,33 @@ github = ['https://github.com/msanchezb/rails-airbnb-friend-group',
           'testlocation.com']
 
 image = '--'
-blurb = '--'
+blurb = ['The platform is an e-commerce platform inspired by Airbnb made
+         during the Le Wagon bootcamp. The product was made utilising the
+         following languages: JavaScript, Ruby on Rails, Ajax, HTML and
+         CSS whilst also working as a team on Github/Heroku.',
+         'On Board is a platform for boardgame enthausiasts who are
+         looking for others to do boardgames with. The product was made
+         utilising the following languages: JavaScript, Ruby on Rails,
+         Ajax, HTML and CSS whilst also working as a team on
+         Github/Heroku.',
+         'A static personal landingpage made using HTML and CSS.',
+         'A cocktail mixing rails application made utilising the
+         following languages: Ruby, Rails, HTML and CSS.',
+         'The portfolio website you are currently on where I can be
+         contacted and where I present my projects. The product was made
+         utilising the following languages: JavaScript, Ruby on Rails,
+         Ajax, HTML and CSS whilst also working as a team on
+         Github/Heroku.',
+         ' ',
+         ' ',
+         ' ']
 
-names = names.each_with_index do |name, index|
+names.each_with_index do |name, index|
   Project.create(name: name,
                  location_url: location[index],
                  github_url: github[index],
                  image_url: image,
-                 blurb: blurb)
+                 blurb: blurb[index])
 end
 
 projects = Project.all
