@@ -59,9 +59,14 @@ blurb = ['The platform is an e-commerce platform inspired by Airbnb made
          utilising the following languages: JavaScript, Ruby on Rails,
          Ajax, HTML and CSS whilst also working as a team on
          Github/Heroku.',
-         ' ',
-         ' ',
-         ' ']
+         'It is the portfolio website of Biomimic Studio. Biomimic Studio is a
+         is the animatronics company from Gustav Hoegen. Biomimic Studio worked
+         on movies such as Jurassic World, Star Wars and Doctor Who.
+         The website is made using html, CSS and JavaScript.',
+         'It is the hangman game made in ruby using api\'s',
+         'It is an online Chinese novel reading website made utilising
+         the following languages: JavaScript, Ruby on Rails, Ajax, HTML and
+         CSS']
 
 names.each_with_index do |name, index|
   Project.create(name: name,
