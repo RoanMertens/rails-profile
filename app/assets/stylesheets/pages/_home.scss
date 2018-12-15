@@ -1,1 +1,27 @@
 // Specific CSS for your home-page
+#white-container{
+  background-color: white;
+  height: 75px;
+}
+
+#green-container{
+  background-color: green;
+  h1{
+    padding: 0;
+    margin: 0;
+  }
+
+  .flex-container{
+  display: flex;
+  }
+}
+
+h3{
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+// #home-logo{}
+// #home-name{}
+
+

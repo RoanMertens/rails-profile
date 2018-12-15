@@ -1,20 +1,29 @@
-<div>
-  <div>
+<div id="white-container"></div>
+<div id="green-container">
+  <div id="home-logo">
     <!-- logo -->
   </div>
 
-  <div>
-    <h3>Hi I'm</h3>
-    <h1>Roan</h1>
+  <div id="home-name">
+    <div class="flex-container">
+      <h3>Hi, I'm</h3>
+      <h1>Roan</h1>
+    </div>
     <h1>Mertens</h1>
   </div>
 
-  <div>
+  <div class="rounded white-outline">
     <h2>A full stack web developer</h2>
-    <div>
-      <%= link_to 'ABOUT ME', about_path %>
-      <%= link_to 'PROJECTS I WORKED ON', projects_path %>
-      <%= link_to 'CONTACT ME', contact_path %>
+    <div class="flex-container">
+      <div class="btn btn-outline-normal">
+        <%= link_to 'about me', about_path %>
+      </div>
+      <div class="btn btn-outline-normal">
+        <%= link_to 'projects I worked on', projects_path %>
+      </div>
+      <div class="btn btn-outline-normal">
+        <%= link_to 'contact me', contact_path %>
+      </div>
     </div>
   </div>
 </div>
