@@ -5,10 +5,18 @@
   <%= link_to 'CONTACT', contact_path %>
 </div>
 
-<% @projects.each do |project| %>
-  <h3><%= link_to project.name, project_path(project) %></h3>
-  <p>website: <%= project.location_url %></p>
-  <p>github: <%= project.github_url %></p>
-  <p>image url: <%= project.image_url %></p>
-  <p>text: <%= project.blurb %></p>
-<% end %>
+<div class="container padded">
+  <div class="row">
+    <% @projects.each do |project| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card">
+          <h3><%= link_to project.name, project_path(project) %></h3>
+          <p>website logo: <%= project.location_url %></p>
+          <p>github logo: <%= project.github_url %></p>
+          <p>image url: <%= project.image_url %></p>
+          <p>text: <%= project.blurb %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
