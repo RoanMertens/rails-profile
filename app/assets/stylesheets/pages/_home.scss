@@ -12,6 +12,17 @@
   }
 }
 
+#parent-to-logo{
+  position: relative;
+}
+
+#home-logo{
+  position: absolute;
+  top: -9vw;
+  left: -9vw;
+  width: 20vw;
+}
+
 #home-name{
   text-align: center;
   .flex-container{
